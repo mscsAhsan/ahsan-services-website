@@ -82,6 +82,7 @@ export default function Chatbot() {
                 <strong>Aria</strong>
                 <small><i className="online" /> AI assistant · online</small>
               </div>
+              <button type="button" className="chat-close" onClick={() => setOpen(false)} aria-label="Close chat" data-cursor><X size={20} /></button>
             </div>
 
             <div className="chat-body">

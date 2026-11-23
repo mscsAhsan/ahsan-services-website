@@ -25,7 +25,7 @@ function RotatingWord() {
   return (
     <span className="rot">
       <AnimatePresence mode="wait">
-        <motion.span key={i} initial={{ y: 24, opacity: 0, filter: "blur(6px)" }} animate={{ y: 0, opacity: 1, filter: "blur(0px)" }} exit={{ y: -24, opacity: 0, filter: "blur(6px)" }} transition={{ duration: 0.4 }}>
+        <motion.span key={i} initial={{ y: 10, opacity: 0.2, filter: "blur(2px)" }} animate={{ y: 0, opacity: 1, filter: "blur(0px)" }} exit={{ y: -10, opacity: 0.2, filter: "blur(2px)" }} transition={{ duration: 0.35 }}>
           {words[i]}
         </motion.span>
       </AnimatePresence>

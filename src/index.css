@@ -8,6 +8,7 @@
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--txt);font-family:var(--font);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
+img{max-width:100%}
 ul{list-style:none}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 input,textarea,select{font:inherit;color:inherit}
@@ -85,7 +86,7 @@ html.has-cursor,html.has-cursor *{cursor:none!important}
 .nav-link:hover,.nav-link.active{color:var(--txt)}
 .nav-underline{position:absolute;left:18px;right:18px;bottom:0;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--red2),var(--red));box-shadow:0 0 10px var(--red2)}
 .burger{display:none}
-.mobile-menu{position:fixed;inset:0;z-index:99;background:rgba(12,12,15,.96);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);display:flex;flex-direction:column;justify-content:center;gap:16px;padding:0 10vw}
+.mobile-menu{position:fixed;inset:0;z-index:99;background:rgba(12,12,15,.96);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);display:flex;flex-direction:column;justify-content:center;gap:16px;padding:0 10vw;overflow-y:auto}
 .mm-link{font:700 2.6rem var(--head)}
 
 /* ========== BUTTONS ========== */
@@ -247,6 +248,8 @@ html.has-cursor,html.has-cursor *{cursor:none!important}
 .chat{position:fixed;right:26px;bottom:104px;z-index:8000;width:370px;max-width:calc(100vw - 24px);height:540px;max-height:calc(100vh - 130px);display:flex;flex-direction:column;border-radius:22px;overflow:hidden;background:rgba(18,18,22,.96);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border:1px solid rgba(255,61,90,.4);box-shadow:0 20px 80px rgba(0,0,0,.6),0 0 60px rgba(225,29,72,.2)}
 .chat-head{display:flex;align-items:center;gap:12px;padding:16px 18px;background:linear-gradient(135deg,rgba(225,29,72,.35),rgba(110,15,31,.35));border-bottom:1px solid var(--line)}
 .chat-head small{display:flex;align-items:center;gap:6px;color:var(--mut);font-size:.75rem}
+.chat-close{margin-left:auto;width:36px;height:36px;border-radius:10px;display:grid;place-items:center;color:var(--mut);flex:none;transition:background .2s,color .2s}
+.chat-close:hover{background:rgba(225,29,72,.15);color:var(--txt)}
 .chat-avatar{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--red2),var(--deep))}
 .chat-body{flex:1;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:10px}
 .bubble{max-width:84%;padding:11px 15px;border-radius:16px;font-size:.92rem;line-height:1.5;white-space:pre-wrap;word-wrap:break-word}
@@ -292,6 +295,19 @@ html.has-cursor,html.has-cursor *{cursor:none!important}
   .chat{right:12px;bottom:92px}
   .chat-fab{right:16px;bottom:16px}
   .rot{min-width:0}
+  .page-top{padding-top:110px}
+  .section{padding:56px 0 12px}
+  .stats,.admin-stats{grid-template-columns:1fr}
+  .svc-row{gap:28px}
+  .form-wrap{padding:20px}
+  .cta{padding:56px 20px}
+  .mm-link{font-size:2rem}
+  .mobile-menu{gap:12px}
+  .svc-visual{min-height:260px}
+  .big-num{font-size:4rem}
+  .footer{padding-bottom:110px}
+  .detail-hero-img,.about-img{aspect-ratio:16/9}
+  .info-card a{overflow-wrap:anywhere}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
