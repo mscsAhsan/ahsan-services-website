@@ -24,8 +24,8 @@ html.has-cursor,html.has-cursor *{cursor:none!important}
 .center-cta{text-align:center;margin-top:70px}
 
 /* ========== TYPE ========== */
-.h1{font-family:var(--head);font-size:clamp(2.6rem,6.2vw,5.2rem);line-height:1.05;font-weight:700;letter-spacing:-.02em}
-.h2{font-family:var(--head);font-size:clamp(1.9rem,4vw,3rem);line-height:1.15;font-weight:700;letter-spacing:-.01em}
+.h1{font-family:var(--head);font-size:clamp(2.6rem,6.2vw,5.2rem);line-height:1.05;font-weight:700;letter-spacing:-.02em;overflow-wrap:break-word}
+.h2{font-family:var(--head);font-size:clamp(1.9rem,4vw,3rem);line-height:1.15;font-weight:700;letter-spacing:-.01em;overflow-wrap:break-word}
 .h3{font-family:var(--head);font-size:clamp(1.5rem,2.6vw,2rem);font-weight:700;margin:6px 0 10px}
 .lead{font-size:1.15rem;color:var(--mut);max-width:560px}
 .sub{color:var(--mut);max-width:560px;margin-top:12px}
@@ -308,6 +308,10 @@ html.has-cursor,html.has-cursor *{cursor:none!important}
   .big-num{font-size:4rem}
   .footer{padding-bottom:110px}
   .info-card a{overflow-wrap:anywhere}
+  .h1{font-size:clamp(1.9rem,8.5vw,2.4rem)}
+  .hero-grid>*{min-width:0}
+  .hero-btns{flex-direction:column}
+  .hero-btns .btn{width:100%}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
