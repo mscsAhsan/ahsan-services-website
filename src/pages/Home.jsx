@@ -14,7 +14,7 @@ import TiltCard from "../components/TiltCard";
 import AnimatedIcon from "../components/AnimatedIcon";
 import Counter from "../components/Counter";
 
-const words = ["AI & Web Engineering", "Websites", "Social Media", "Digital Growth", "Machine Learning", "Research"];
+const words = ["AI & Web Engineering", "Websites", "Web Apps & Dashboards", "AI Chatbots & Assistants", "Machine Learning", "AI Tools & Automation"];
 
 function RotatingWord() {
   const [i, setI] = useState(0);
@@ -52,7 +52,7 @@ export default function Home() {
               <SplitText text="Digital Experiences" delay={0.85} />
             </h1>
             <motion.p className="lead" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.5 }}>
-              One team for everything your brand needs to grow online. Specialists in <RotatingWord />
+              AI-powered web apps, intelligent systems and machine learning, built end to end. Specialists in <RotatingWord />
             </motion.p>
             <motion.div className="hero-btns" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.7 }}>
               <Magnetic><Link to="/contact" className="btn btn-primary">Start a project <ArrowRight size={18} /></Link></Magnetic>
@@ -77,7 +77,7 @@ export default function Home() {
 
       {/* ---------- SERVICES ---------- */}
       <section className="section container">
-        <SectionHead kicker="What we do" title="Our services" sub="Six core areas, one team. Mix and match to fit your goals." />
+        <SectionHead kicker="What we do" title="Our services" sub="Six core areas. Mix and match to fit your goals." />
         <div className="grid-3">
           {services.map((s, i) => (
             <Reveal key={s.id} delay={0.08 * (i % 3)}>
@@ -129,19 +129,18 @@ export default function Home() {
 
       {/* ---------- PACKAGES ---------- */}
       <section className="section container">
-        <SectionHead kicker="Pricing" title="Packages" sub="Sample tiers. Final pricing depends on your scope, so tell us your idea for a free quote." />
+        <SectionHead kicker="Pricing" title="Packages" sub="Three tiers. Final pricing depends on your scope, so tell us your idea for a free quote." />
         <div className="grid-3 pk-grid">
           {packages.map((p, i) => (
             <Reveal key={p.name} delay={0.12 * i}>
               <TiltCard className={`pk ${p.hot ? "hot" : ""}`}>
                 {p.hot && <span className="badge-pop">MOST POPULAR</span>}
                 <h3>{p.name}</h3>
-                <div className="pk-price">{p.price}</div>
-                <small className="muted">starting from</small>
+                <div className="pk-price">Custom quote</div>
                 <ul className="checks">
                   {p.feats.map((f) => <li key={f}><Check size={16} /> {f}</li>)}
                 </ul>
-                <Link to="/contact" className={`btn ${p.hot ? "btn-light" : "btn-ghost"} block`}>Choose {p.name}</Link>
+                <Link to="/contact" className={`btn ${p.hot ? "btn-light" : "btn-ghost"} block`}>Request a quote</Link>
               </TiltCard>
             </Reveal>
           ))}

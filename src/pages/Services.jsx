@@ -11,7 +11,7 @@ import Magnetic from "../components/Magnetic";
 export default function Services() {
   return (
     <div className="container page-top">
-      <SectionHead kicker="In detail" title="Everything we offer" sub="From AI-powered products to social media growth and research, here is what is included in each service." />
+      <SectionHead kicker="In detail" title="Everything we offer" sub="From AI-powered products to chatbots and automation, here is what is included in each service." />
 
       <div className="svc-list">
         {services.map((s, i) => (

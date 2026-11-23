@@ -20,9 +20,11 @@ export default function About() {
       <SectionHead kicker="About us" title="Who we are" />
       <Reveal className="about-text">
         <p className="lead">
-          {BRAND.name} is a digital studio that combines engineering, creativity and research. We help startups, businesses and institutions launch smarter products, grow their audience and make decisions backed by data.
+          {BRAND.name} is a studio focused on one thing: building intelligent digital products. We design and ship AI-powered web apps, full-stack platforms, machine learning systems, chatbots and automations - from the first sketch to a live product real users can rely on.
         </p>
-        <p className="muted">[Replace this with your own story, mission and experience in src/pages/About.jsx.]</p>
+        <p className="muted">
+          The stack is Python, PyTorch and TensorFlow for the AI side, and React, Next.js, Node.js, Flask and FastAPI for the web side, with PostgreSQL underneath. Every project follows the same approach: a working version first, then test, measure and improve.
+        </p>
       </Reveal>
 
       <div className="stats section">

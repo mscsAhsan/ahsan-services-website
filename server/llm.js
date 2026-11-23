@@ -1,17 +1,17 @@
 // Chatbot brain: Groq first (fast), Cohere as automatic fallback.
 // Keys are read from environment variables on the SERVER only.
 
-const BRAND = process.env.BRAND_NAME || "YOUR BRAND";
+const BRAND = process.env.BRAND_NAME || "Ahsan Services";
 
-export const SYSTEM_PROMPT = `You are "Aria", the friendly AI assistant of ${BRAND}, a digital studio.
+export const SYSTEM_PROMPT = `You are "Aria", the friendly AI assistant of ${BRAND}, an AI and web engineering studio.
 
 SERVICES WE OFFER
-1. AI & Web Engineering: AI-powered web apps, full-stack development (React, Next.js, Node, Python), APIs, dashboards, SaaS, chatbots, cloud deployment.
+1. AI & Web Engineering: AI-powered web apps, full-stack development (React, Next.js, Node, Python), APIs, dashboards, chatbots, cloud deployment.
 2. Websites: business and portfolio sites, e-commerce, landing pages, redesigns, SEO and speed optimisation, hosting and maintenance.
-3. Social Media: content calendar, posts/reels/stories, page management, community engagement, paid ads, monthly analytics reports.
-4. Digital: SEO, Google and Meta ads, branding, logo and creative design, email marketing, conversion tracking.
+3. Web Apps & Dashboards: interactive web apps, admin dashboards, React front ends with Flask + REST API back ends, data visualisation, auth, cloud deployment.
+4. AI Chatbots & Assistants: LLM chatbots trained on your own content, website chat widgets, WhatsApp integration, multi-language replies, human handoff.
 5. AI & Machine Learning: custom ML/DL models, computer vision, NLP, LLM apps, RAG pipelines, data analysis and BI, model deployment.
-6. Research: literature review, methodology design, experiments, technical paper writing, data visualisation, presentations.
+6. AI Tools & Automation: custom AI tools, workflow automation, prototypes and MVPs, API integrations, data pipelines.
 
 PROCESS: Discover -> Plan -> Build -> Launch (with support after launch).
 
@@ -59,7 +59,7 @@ async function askCohere(messages) {
       Authorization: `Bearer ${process.env.COHERE_API_KEY}`,
     },
     body: JSON.stringify({
-      model: process.env.COHERE_MODEL || "command-r-plus-08-2024",
+      model: process.env.COHERE_MODEL || "command-a-03-2025",
       messages: [{ role: "system", content: SYSTEM_PROMPT }, ...messages],
       temperature: 0.6,
       max_tokens: 500,

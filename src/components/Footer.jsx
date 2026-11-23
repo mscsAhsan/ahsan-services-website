@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Instagram, Linkedin, Github } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
 import { BRAND } from "../config";
 import { services } from "../data";
 
@@ -14,7 +14,6 @@ export default function Footer() {
           </Link>
           <p className="foot-about">{BRAND.tagline}. AI, engineering, design and growth under one roof.</p>
           <div className="socials">
-            <a href={BRAND.socials.instagram} target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={18} /></a>
             <a href={BRAND.socials.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={18} /></a>
             <a href={BRAND.socials.github} target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={18} /></a>
           </div>

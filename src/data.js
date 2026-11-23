@@ -1,4 +1,4 @@
-import { Code2, Globe, Share2, TrendingUp, BrainCircuit, FlaskConical } from "lucide-react";
+import { Code2, Globe, LayoutDashboard, Bot, BrainCircuit, Workflow } from "lucide-react";
 
 export const services = [
   {
@@ -16,18 +16,18 @@ export const services = [
     tools: ["WordPress", "Shopify", "React", "Tailwind", "Figma"],
   },
   {
-    id: "social", num: "03", icon: Share2, title: "Social Media",
-    tag: "Grow, engage and stay consistent",
-    desc: "Consistent, on-brand content and management that builds an engaged community around your business.",
-    items: ["Content calendar", "Posts, reels, stories", "Page management", "Community engagement", "Paid ad campaigns", "Monthly analytics report"],
-    tools: ["Canva", "CapCut", "Meta Business Suite", "Buffer", "Adobe"],
+    id: "web-apps", num: "03", icon: LayoutDashboard, title: "Web Apps & Dashboards",
+    tag: "Interactive apps and data dashboards",
+    desc: "Interactive web apps and dashboards with React front ends and Flask + REST API back ends: data in, answers out.",
+    items: ["React front ends", "Flask + REST API back ends", "Admin dashboards", "Data visualisation", "Auth and user accounts", "Cloud deployment"],
+    tools: ["React", "Flask", "REST APIs", "PostgreSQL", "Tailwind", "Node.js"],
   },
   {
-    id: "digital", num: "04", icon: TrendingUp, title: "Digital",
-    tag: "Marketing that brings real customers",
-    desc: "Full-funnel digital growth: be found on Google, stand out visually and convert attention into sales.",
-    items: ["SEO and local SEO", "Google and Meta ads", "Logo and branding", "Creative design", "Email marketing", "Conversion tracking"],
-    tools: ["Google Ads", "Analytics", "Search Console", "Meta Ads", "Mailchimp"],
+    id: "chatbots", num: "04", icon: Bot, title: "AI Chatbots & Assistants",
+    tag: "Assistants that answer from your content",
+    desc: "Cohere and LLM-powered chatbots that answer from your own content: trained on your docs, pages and FAQs, and plugged into your site.",
+    items: ["LLM chatbots", "Trained on your content", "Website chat widget", "WhatsApp integration", "Multi-language replies", "Human handoff"],
+    tools: ["Cohere", "Groq", "LangChain", "React", "Node.js", "Python"],
   },
   {
     id: "ai-ml", num: "05", icon: BrainCircuit, title: "AI & Machine Learning",
@@ -37,18 +37,18 @@ export const services = [
     tools: ["PyTorch", "TensorFlow", "scikit-learn", "LangChain", "Power BI"],
   },
   {
-    id: "research", num: "06", icon: FlaskConical, title: "Research",
-    tag: "Rigorous, publication-grade work",
-    desc: "Structured, well-documented research support, from idea and methodology to experiments and write-up.",
-    items: ["Literature review", "Methodology design", "Experiments and results", "Technical paper writing", "Data visualization", "Presentation support"],
-    tools: ["Python", "Jupyter", "LaTeX", "Zotero", "Excel", "Power BI"],
+    id: "automation", num: "06", icon: Workflow, title: "AI Tools & Automation",
+    tag: "Small tools that save hours",
+    desc: "Small AI tools, automations, prototypes and MVPs: a working version first, then iterate based on real use.",
+    items: ["Custom AI tools", "Workflow automation", "Prototypes and MVPs", "API integrations", "Data pipelines", "Scripting and automation"],
+    tools: ["Python", "FastAPI", "APIs", "PostgreSQL", "PyTorch", "Node.js"],
   },
 ];
 
 export const stats = [
-  { to: 50, suffix: "+", label: "Projects delivered" },
-  { to: 30, suffix: "+", label: "Happy clients" },
+  { to: 6, suffix: "+", label: "Projects built" },
   { to: 6, suffix: "", label: "Core services" },
+  { to: 10, suffix: "+", label: "Tools & frameworks" },
   { to: 24, suffix: "/7", label: "Support & updates" },
 ];
 
@@ -60,9 +60,9 @@ export const process = [
 ];
 
 export const packages = [
-  { name: "Starter", price: "PKR XX,XXX", hot: false, feats: ["Up to 5 pages", "Responsive design", "Basic SEO setup", "7 days support"] },
-  { name: "Growth", price: "PKR XX,XXX", hot: true, feats: ["Everything in Starter", "Custom features / CMS", "Social media setup", "30 days support"] },
-  { name: "Premium", price: "PKR XXX,XXX", hot: false, feats: ["Everything in Growth", "AI / ML integration", "Monthly marketing", "Priority support"] },
+  { name: "Starter", hot: false, feats: ["Up to 5 pages", "Responsive design", "Basic SEO setup", "7 days support"] },
+  { name: "Growth", hot: true, feats: ["Everything in Starter", "Custom features / CMS", "Chatbot setup", "30 days support"] },
+  { name: "Premium", hot: false, feats: ["Everything in Growth", "AI / ML integration", "Automation and APIs", "Priority support"] },
 ];
 
-export const marqueeItems = ["React", "Next.js", "Node.js", "Python", "PyTorch", "TensorFlow", "LangChain", "Groq", "Cohere", "PostgreSQL", "Figma", "Tailwind", "Power BI", "Google Ads", "Meta Ads", "SEO"];
+export const marqueeItems = ["React", "Next.js", "Node.js", "Python", "FastAPI", "PyTorch", "TensorFlow", "scikit-learn", "OpenCV", "PostgreSQL", "Flask", "Tailwind"];
