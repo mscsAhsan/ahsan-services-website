@@ -76,6 +76,9 @@ export default function Navbar() {
             <motion.div initial={{ x: -40, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.08 * links.length }}>
               <Link to="/admin" className="mm-link">Admin</Link>
             </motion.div>
+            <motion.div initial={{ x: -40, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.08 * (links.length + 1) }}>
+              <Link to="/contact" className="btn btn-primary block" style={{ marginTop: 8 }}>Get a quote</Link>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

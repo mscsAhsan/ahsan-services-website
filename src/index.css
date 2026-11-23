@@ -85,6 +85,7 @@ html.has-cursor,html.has-cursor *{cursor:none!important}
 .nav-link{position:relative;padding:8px 18px;color:var(--mut);font-weight:500;transition:color .2s}
 .nav-link:hover,.nav-link.active{color:var(--txt)}
 .nav-underline{position:absolute;left:18px;right:18px;bottom:0;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--red2),var(--red));box-shadow:0 0 10px var(--red2)}
+.nav-cta{display:flex;gap:10px;align-items:center}
 .burger{display:none}
 .mobile-menu{position:fixed;inset:0;z-index:99;background:rgba(12,12,15,.96);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);display:flex;flex-direction:column;justify-content:center;gap:16px;padding:0 10vw;overflow-y:auto}
 .mm-link{font:700 2.6rem var(--head)}
@@ -297,7 +298,7 @@ html.has-cursor,html.has-cursor *{cursor:none!important}
   .rot{min-width:0}
   .page-top{padding-top:110px}
   .section{padding:56px 0 12px}
-  .stats,.admin-stats{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr}
   .svc-row{gap:28px}
   .form-wrap{padding:20px}
   .cta{padding:56px 20px}
@@ -306,7 +307,6 @@ html.has-cursor,html.has-cursor *{cursor:none!important}
   .svc-visual{min-height:260px}
   .big-num{font-size:4rem}
   .footer{padding-bottom:110px}
-  .detail-hero-img,.about-img{aspect-ratio:16/9}
   .info-card a{overflow-wrap:anywhere}
 }
 @media (prefers-reduced-motion:reduce){
@@ -376,4 +376,9 @@ html.has-cursor,html.has-cursor *{cursor:none!important}
 .svc-card-img{aspect-ratio:16/9;border-radius:14px;overflow:hidden;margin-bottom:10px;border:1px solid rgba(255,61,90,.25)}
 .svc-card-img img{width:100%;height:100%;object-fit:cover;display:block}
 .foot-svc img{width:44px;height:44px;object-fit:cover;border-radius:10px;border:1px solid rgba(255,61,90,.35);flex:none}
-.nav-cta{display:flex;gap:10px;align-items:center}
+
+/* ========== MOBILE OVERRIDES (must stay last: these beat later base rules) ========== */
+@media (max-width:620px){
+  .admin-stats{grid-template-columns:1fr}
+  .detail-hero-img,.about-img{aspect-ratio:16/9}
+}
