@@ -9,10 +9,10 @@ export default function Footer() {
       <div className="container foot-grid">
         <div>
           <Link to="/" className="logo">
-            <span className="logo-mark">{BRAND.short}</span>
+            <img src="/logo.svg" alt="Ahsan Services logo" className="logo-img" />
             <span className="logo-name">{BRAND.name}</span>
           </Link>
-          <p className="foot-about">{BRAND.tagline}. AI, engineering, design and growth under one roof.</p>
+          <p className="foot-about">{BRAND.tagline}. AI-powered web apps and intelligent systems, engineered end to end.</p>
           <div className="socials">
             <a href={BRAND.socials.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={18} /></a>
             <a href={BRAND.socials.github} target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={18} /></a>
@@ -20,7 +20,7 @@ export default function Footer() {
         </div>
         <div>
           <h4>Services</h4>
-          {services.map((s) => <Link key={s.id} to="/services">{s.title}</Link>)}
+          {services.map((s) => <Link key={s.id} to={`/services/${s.slug}`}>{s.title}</Link>)}
         </div>
         <div>
           <h4>Company</h4>
@@ -37,7 +37,7 @@ export default function Footer() {
       </div>
       <div className="container foot-bottom">
         <span>© {new Date().getFullYear()} {BRAND.name}. All rights reserved.</span>
-        <span>{BRAND.site}</span>
+        <span className="foot-bottom-links"><Link to="/admin">Admin</Link><span>{BRAND.site}</span></span>
       </div>
     </footer>
   );

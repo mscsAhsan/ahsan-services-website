@@ -15,6 +15,8 @@ import Home from "./pages/Home";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import ServiceDetail from "./pages/ServiceDetail";
+import AdminPage from "./pages/AdminPage";
 import NotFound from "./pages/NotFound";
 
 export default function App() {
@@ -37,8 +39,10 @@ export default function App() {
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<PageWrap><Home /></PageWrap>} />
               <Route path="/services" element={<PageWrap><Services /></PageWrap>} />
+              <Route path="/services/:slug" element={<PageWrap><ServiceDetail /></PageWrap>} />
               <Route path="/about" element={<PageWrap><About /></PageWrap>} />
               <Route path="/contact" element={<PageWrap><Contact /></PageWrap>} />
+              <Route path="/admin" element={<PageWrap><AdminPage /></PageWrap>} />
               <Route path="*" element={<PageWrap><NotFound /></PageWrap>} />
             </Routes>
           </AnimatePresence>

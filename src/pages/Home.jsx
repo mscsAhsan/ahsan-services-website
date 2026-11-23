@@ -91,7 +91,7 @@ export default function Home() {
                 <ul className="dots">
                   {s.items.slice(0, 3).map((it) => <li key={it}>{it}</li>)}
                 </ul>
-                <Link to="/services" className="more">Learn more <ArrowUpRight size={16} /></Link>
+                <Link to={`/services/${s.slug}`} className="more">Learn more <ArrowUpRight size={16} /></Link>
               </TiltCard>
             </Reveal>
           ))}

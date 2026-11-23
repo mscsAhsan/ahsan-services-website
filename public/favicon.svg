@@ -1,1 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D5A"/><stop offset="1" stop-color="#6E0F1F"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="url(#g)"/><text x="32" y="41" font-family="Arial" font-weight="700" font-size="26" text-anchor="middle" fill="#fff">YB</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Ahsan Services logo">
+  <defs>
+    <linearGradient id="asg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF3D5A"/>
+      <stop offset="0.55" stop-color="#E11D48"/>
+      <stop offset="1" stop-color="#B3122F"/>
+    </linearGradient>
+  </defs>
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#asg)"/>
+  <g fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M132 372 L208 150 L284 372" stroke-width="42"/>
+    <path d="M168 296 L248 296" stroke-width="34"/>
+    <path d="M392 196 C392 168 368 150 340 150 C308 150 288 170 288 194 C288 218 304 230 332 238 C366 247 392 256 392 284 C392 312 368 334 338 334 C310 334 288 316 288 290" stroke-width="36"/>
+  </g>
+</svg>

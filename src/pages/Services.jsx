@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { services } from "../data";
 import SectionHead from "../components/SectionHead";
 import Reveal from "../components/Reveal";
@@ -17,6 +17,8 @@ export default function Services() {
         {services.map((s, i) => (
           <Reveal key={s.id} className={`svc-row ${i % 2 ? "flip" : ""}`}>
             <TiltCard className="svc-visual" max={8}>
+              <img src={s.image} alt={`${s.title} - abstract dark red visual`} loading="lazy" className="svc-img" />
+              <div className="svc-img-shade" />
               <motion.div className="big-icon" animate={{ rotate: [0, 4, -4, 0] }} transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}>
                 <AnimatedIcon icon={s.icon} size={54} box={110} />
               </motion.div>
@@ -34,6 +36,7 @@ export default function Services() {
               <div className="chips-row">
                 {s.tools.map((t) => <span key={t} className="chip">{t}</span>)}
               </div>
+              <Link to={`/services/${s.slug}`} className="more">View details <ArrowUpRight size={16} /></Link>
             </div>
           </Reveal>
         ))}

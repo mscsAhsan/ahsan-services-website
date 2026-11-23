@@ -27,6 +27,10 @@ export default function About() {
         </p>
       </Reveal>
 
+      <Reveal>
+        <img src="/images/about.jpg" alt="Abstract visual of circuits merging into a neural network" loading="lazy" className="about-img" />
+      </Reveal>
+
       <div className="stats section">
         {stats.map((s, i) => (
           <Reveal key={s.label} delay={0.08 * i} className="stat">

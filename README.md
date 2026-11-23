@@ -47,14 +47,25 @@ Import the repo; Vercel uses `api/chat.js` and `api/contact.js` as serverless fu
 for SPA routing. Add the two keys under Project Settings -> Environment Variables.
 
 ## 5. Contact form
-Messages are saved to `server/messages.jsonl` (Node host) or Vercel function logs. To receive them by email,
+Messages are saved to Turso (when configured) or to `server/messages.jsonl` (Node host) or Vercel function logs. To receive them by email,
 forward the `entry` object to Resend, Formspree or EmailJS inside `server/index.js` / `api/contact.js`.
+
+## 6. Admin dashboard (/admin)
+The dashboard shows contact messages and chatbot questions, with search, read/unread, delete and stats. It is not in the main nav; a small "Admin" link sits in the footer bottom.
+1. Create a free database at turso.tech and copy its URL and auth token.
+2. Set these environment variables (locally in `.env`, on Vercel under Project Settings -> Environment Variables, all environments):
+   `TURSO_DATABASE_URL`, `TURSO_AUTH_TOKEN`, `ADMIN_PASSWORD` (pick a strong password).
+   Optional: `ADMIN_SESSION_SECRET` (separate secret for signing session tokens; if empty, `ADMIN_PASSWORD` is used).
+3. Redeploy (Vercel) or restart `npm run dev` (local), then open `/admin` and sign in with the admin password.
+Sessions last 7 days. Without `ADMIN_PASSWORD` the login page shows setup steps; without Turso the dashboard shows a "database not connected" note. The contact form keeps working either way.
 
 ## Project structure
 ```
 server/   Express API + Groq/Cohere logic
 api/      Vercel serverless versions of the same endpoints
 src/components/  Cursor, PageWrap (transitions), Preloader, Chatbot, OrbitVisual, NeuralBackground, ...
-src/pages/       Home, Services, About, Contact, NotFound
+src/pages/       Home, Services, About, Contact, ServiceDetail, AdminPage, NotFound
+api/admin/       Admin login, messages, queries and stats endpoints (Turso + HMAC sessions)
+api/_lib/        Turso client and session-token helpers
 prompts/website-prompt.json   The full JSON design/build prompt for this site
 ```

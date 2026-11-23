@@ -34,7 +34,7 @@ export default function Navbar() {
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       >
         <Link to="/" className="logo" data-cursor>
-          <span className="logo-mark">{BRAND.short}</span>
+          <img src="/logo.svg" alt="Ahsan Services logo" className="logo-img" />
           <span className="logo-name">{BRAND.name}</span>
         </Link>
 

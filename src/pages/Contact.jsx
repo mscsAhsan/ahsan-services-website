@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send, CheckCircle2, MessageCircle } from "lucide-react";
 import { BRAND } from "../config";
@@ -11,7 +12,9 @@ import AnimatedIcon from "../components/AnimatedIcon";
 const API = import.meta.env.VITE_API_BASE || "";
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", service: services[0].title, message: "" });
+  const [params] = useSearchParams();
+  const initialService = services.find((s) => s.slug === params.get("service"))?.title || services[0].title;
+  const [form, setForm] = useState({ name: "", email: "", service: initialService, message: "" });
   const [status, setStatus] = useState("idle"); // idle | sending | sent | error
   const [err, setErr] = useState("");
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
