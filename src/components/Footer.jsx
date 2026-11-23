@@ -20,7 +20,7 @@ export default function Footer() {
         </div>
         <div>
           <h4>Services</h4>
-          {services.map((s) => <Link key={s.id} to={`/services/${s.slug}`}>{s.title}</Link>)}
+          {services.map((s) => <Link key={s.id} to={`/services/${s.slug}`} className="foot-svc"><img src={s.image} alt={`${s.title} thumbnail`} loading="lazy" />{s.title}</Link>)}
         </div>
         <div>
           <h4>Company</h4>

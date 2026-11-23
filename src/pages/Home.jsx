@@ -82,6 +82,9 @@ export default function Home() {
           {services.map((s, i) => (
             <Reveal key={s.id} delay={0.08 * (i % 3)}>
               <TiltCard className="svc-card">
+                <div className="svc-card-img">
+                  <img src={s.image} alt={`${s.title} - abstract dark red visual`} loading="lazy" />
+                </div>
                 <div className="svc-top">
                   <AnimatedIcon icon={s.icon} delay={i * 0.25} />
                   <span className="svc-num">{s.num}</span>

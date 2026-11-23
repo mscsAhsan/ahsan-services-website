@@ -52,6 +52,7 @@ export default function Navbar() {
         </nav>
 
         <div className="nav-cta">
+          <Link to="/admin" className="btn btn-ghost sm" data-cursor>Admin</Link>
           <Magnetic>
             <Link to="/contact" className="btn btn-primary sm">
               Get a quote <ArrowUpRight size={16} />
@@ -72,6 +73,9 @@ export default function Navbar() {
                 <Link to={l.to} className="mm-link">{l.label}</Link>
               </motion.div>
             ))}
+            <motion.div initial={{ x: -40, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.08 * links.length }}>
+              <Link to="/admin" className="mm-link">Admin</Link>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
