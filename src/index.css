@@ -312,6 +312,13 @@ html.has-cursor,html.has-cursor *{cursor:none!important}
   .hero-grid>*{min-width:0}
   .hero-btns{flex-direction:column}
   .hero-btns .btn{width:100%}
+  .tilt{padding:22px}
+  .svc-list{gap:48px}
+  .sec-head{margin-bottom:32px}
+  .center-cta{margin-top:44px}
+  .admin-pass input,.admin-search input{flex:1;min-width:0}
+  .chat-input input{min-width:0}
+  .foot-grid a,.cta small{overflow-wrap:anywhere}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
@@ -385,4 +392,5 @@ html.has-cursor,html.has-cursor *{cursor:none!important}
 @media (max-width:620px){
   .admin-stats{grid-template-columns:1fr}
   .detail-hero-img,.about-img{aspect-ratio:16/9}
+  .admin-item{padding:18px 16px}
 }
